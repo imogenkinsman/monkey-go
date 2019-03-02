@@ -26,9 +26,24 @@ const (
 	LET      = "LET"
 )
 
+// TokenType is the type of a token
 type TokenType string
 
+// Token is a single component of tokenized Monkey source code
 type Token struct {
 	Type    TokenType
 	Literal string
+}
+
+var keywords = map[string]TokenType{
+	"fn":  FUNCTION,
+	"let": LET,
+}
+
+// LookupIdent checks an identifier against a list of reserved keywords
+func LookupIdent(ident string) TokenType {
+	if tok, ok := keywords[ident]; ok {
+		return tok
+	}
+	return IDENT
 }

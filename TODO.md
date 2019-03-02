@@ -1,0 +1,3 @@
+- attach filenames and line numbers to tokens for debugging
+- add support for non-unicode characters (using rune)
+- add support for floats, hex, etc
