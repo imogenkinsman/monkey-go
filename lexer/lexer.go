@@ -1,6 +1,6 @@
 package lexer
 
-import "github.com/jademcgough/interpreter/token"
+import "github.com/jademcgough/monkey-go/token"
 
 // Lexer is a lexer for the Monkey language
 type Lexer struct {
